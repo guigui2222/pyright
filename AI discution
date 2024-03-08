@@ -1,0 +1,40 @@
+#ouvrir le fichier de memoire pour la sauvegarder en arretant le programe
+minde=open("memoire.txt", "a")
+#creation d'une variable qui ferra le transfert entre la memoire sur dictionnaire et la memoire sur fichier texte
+a=""
+
+memoire={
+        
+
+    }
+#memoire qui ne contiendra q'un élément pour éviter de recopier toutes les valeurs
+douane={
+     
+
+
+}
+#creation d'une liste qui contiendra plusieurs valeurs d'une clé valeurs d'une clé
+modifs=[]
+#boucle d'aprentissage
+while True:
+    
+    paire_de_memoire=memoire.items()
+    #variable input servant a converser avec "l'IA"
+    aprentisseur=input() 
+    #verification de l'apartenance au dictionnaire: memoire
+    if  aprentisseur not in memoire:
+        #variable servant a donner une eventuelle reponse de l'AI
+        aprentisseurreponse=input()
+        #enregistrement de la reponse dans la memoire
+        modifs.append(aprentisseurreponse)
+        memoire[aprentisseur]=[modifs]
+        #transfert de la memoire au fichier texte
+        a= a + a.join(memoire)
+        minde.write(a)   
+        minde.write("\n")
+    else:
+        
+        for aprentisseur, valeur in memoire.items():
+                
+                
+                print(f"-{valeur}")
